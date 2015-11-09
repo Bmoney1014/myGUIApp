@@ -10,18 +10,27 @@ import gui.controller.GUIController;
 public class GUIFrame extends JFrame
 {
 	private GUIController baseController;
+	private GUIPanel basePanel;
 	
 	public GUIFrame(GUIController baseController)
 	{
 		this.baseController = baseController;
+		basePanel = new GUIPanel(baseController);
 		setupFrame();
 		
 	}
 	
 	private void setupFrame()
 	{
-		this.setSize(400,400);
-		this.setResizable(false);
-		this.setVisible(true);
+		this.setContentPane(basePanel); //Must be first line of setupFrame  - Installs the panel in the frame
+		this.setSize(400,400); //Find a good size for the application
+		this.setResizable(false); //Advisable not required
+		this.setVisible(true); //Must be last line of code
 	}
+	
+	public GUIController getBaseController()
+	{
+		return baseController;
+	}
+	
 }

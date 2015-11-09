@@ -1,5 +1,7 @@
 package gui.controller;
 
+import gui.view.GUIFrame;
+
 public class GUIController
 {
 	private GUIFrame baseFrame;
