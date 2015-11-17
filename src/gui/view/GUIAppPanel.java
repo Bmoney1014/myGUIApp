@@ -2,23 +2,23 @@ package gui.view;
 
 import javax.swing.*;
 
-import gui.controller.GUIController;
+import gui.controller.GUIAppController;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
  * 
  * @author bhos1889
- * @version 0.x November 9, 2015
+ * @version 1.x November 13, 2015
  */
-public class GUIPanel extends JPanel
+public class GUIAppPanel extends JPanel
 {
-	private GUIController baseController;
+	private GUIAppController baseController;
 	private JButton firstButton;
 	private JTextField firstField;
 	private SpringLayout baseLayout;
 	
-	public GUIPanel(GUIController baseController)
+	public GUIAppPanel(GUIAppController baseController)
 	{
 		this.baseController = baseController;
 		
@@ -50,7 +50,7 @@ public class GUIPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 107, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -32, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, firstField, 37, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.WEST, firstField, -24, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstField, -24, SpringLayout.SOUTH, this);
 	}
 	private void setupListeners()
 	{
@@ -60,7 +60,10 @@ public class GUIPanel extends JPanel
 			{
 				firstField.setText("Wow, this is the most amazing click ever!");
 			}
+		
 		});
+		
 	}
 	
 }
+
