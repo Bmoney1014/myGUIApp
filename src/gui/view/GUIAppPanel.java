@@ -3,8 +3,8 @@ package gui.view;
 import javax.swing.*;
 
 import gui.controller.GUIAppController;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
+import java.awt.Color;
 
 /**
  * 
@@ -49,8 +49,8 @@ public class GUIAppPanel extends JPanel
 	{
 		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 107, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -32, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, firstField, 37, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, firstField, -24, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, firstField, 37, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstField, -24, SpringLayout.EAST, this);
 	}
 	private void setupListeners()
 	{
@@ -63,7 +63,34 @@ public class GUIAppPanel extends JPanel
 		
 		});
 		
-	}
-	
+		this.addMouseListener(new MouseListener()
+		{
+			public void mouseClicked(MouseEvent click)
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent entered)
+			{
+				
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+				
+			}
+			
+			public void mouseReleased(MouseEvent released)
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+			}
+		
+		});		
+	}	
 }
 
